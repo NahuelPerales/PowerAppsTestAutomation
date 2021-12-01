@@ -1,0 +1,20 @@
+name: Onboarding-$(date:yyyyMMdd)$(rev:.r)
+  variables:
+  - name: message
+    value: Hello world
+  
+  stages:
+  - stage: first-stage
+    jobs:
+    -job: first-job
+      -step: send-message
+        -script: echo ${{ message }}
+    -job: second-job
+      -step: send-message
+
+  - stage: second-stage
+    jobs:
+    -job: first-job
+      -step: send-message
+    -job: second-job
+      -step: send-message
