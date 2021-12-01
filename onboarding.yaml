@@ -4,18 +4,22 @@
   stages:
   - stage: first-stage
     jobs:
-    -job: first-job
+    -job: 
+      name: first-job
       steps: 
         -script: echo ${{ message }}
-    -job: second-job
+    -job: 
+      name: second-job
       steps: 
         -script: echo ${{ message }}
 
   - stage: second-stage
     jobs:
-    -job: first-job
+    -job: 
+      name: first-job
       steps: 
         -script: echo ${{ message }}
-    -job: second-job
+    -job: 
+      name: second-job
       steps: 
         -script: echo ${{ message }}
