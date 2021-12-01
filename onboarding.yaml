@@ -14,8 +14,8 @@ stages:
 - stage: second-stage
   jobs:
 - job: first-job
-steps: 
-  -script: echo ${{ message }}
+  steps: 
+-script: echo ${{ message }}
 - job: second-job
 steps: 
   -script: echo ${{ message }}
