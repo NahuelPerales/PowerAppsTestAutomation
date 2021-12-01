@@ -16,10 +16,10 @@
   - stage: second-stage
     jobs:
     -job: 
-      name: first-job
+      name: third-job
       steps: 
         -script: echo ${{ message }}
     -job: 
-      name: second-job
+      name: fourth-job
       steps: 
         -script: echo ${{ message }}
