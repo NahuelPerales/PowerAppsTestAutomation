@@ -1,5 +1,5 @@
 variables:
-- message: Hello world
+- message: 'Hello world'
 
 stages:
 - stage: first-stage
@@ -9,13 +9,13 @@ stages:
 - script: echo $(message)
 - job: second-job
   steps: 
-  -script: echo ${{ message }}
+  -script: echo $(message)
 
 - stage: second-stage
   jobs:
-- job: first-job
+- job: third-job
   steps: 
-  -script: echo ${{ message }}
-- job: second-job
+  -script: echo $(message)
+- job: fourth-job
   steps: 
-  -script: echo ${{ message }}
+  -script: echo $(message)
