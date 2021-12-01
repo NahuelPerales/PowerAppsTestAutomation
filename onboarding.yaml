@@ -3,20 +3,20 @@ variables:
   value: 'Hello world'
 
 stages:
-  - stage: first-stage
+  - stage: first_stage
     jobs:
-    - job: first-job
+    - job: first_job
       steps: 
         - script: echo $(message)
-    - job: second-job
+    - job: second_job
       steps: 
         - script: echo $(message)
 
-  - stage: second-stage
+  - stage: second_stage
     jobs:
-    - job: third-job
+    - job: third_job
       steps: 
         - script: echo $(message)
-    - job: fourth-job
+    - job: fourth_job
       steps: 
         - script: echo $(message)
