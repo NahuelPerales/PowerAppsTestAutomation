@@ -1,4 +1,3 @@
-name: Onboarding-$(date:yyyyMMdd)$(rev:.r)
   variables:
   - message: Hello world
   
