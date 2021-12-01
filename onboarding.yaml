@@ -1,22 +1,21 @@
-  variables:
-    -name: message
-     value: 'Hello world'
-  
-  stages:
-  - stage: first-stage
-    jobs:
-    - job: first-job
-      steps: 
-        -script: echo $(message)
-    - job: second-job
-      steps: 
-        -script: echo $(message)
+variables:
+- message: Hello world
 
-  - stage: second-stage
-    jobs:
-    - job: first-job
-      steps: 
-        -script: echo $(message)
-    - job: second-job
-      steps: 
-        -script: echo $(message)
+stages:
+- stage: first-stage
+  jobs:
+  - job: first-job
+    steps: 
+      -script: echo $(message)
+  - job: second-job
+    steps: 
+      -script: echo ${{ message }}
+
+- stage: second-stage
+  jobs:
+  - job: first-job
+    steps: 
+      -script: echo ${{ message }}
+  - job: second-job
+    steps: 
+      -script: echo ${{ message }}
