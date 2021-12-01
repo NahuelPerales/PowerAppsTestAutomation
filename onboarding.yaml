@@ -4,6 +4,8 @@ variables:
 
 stages:
   - stage: first_stage
+    pool: sspool
+    name: Default
     jobs:
     - job: first_job
       steps: 
@@ -13,6 +15,8 @@ stages:
         - script: echo $(message)
 
   - stage: second_stage
+    pool: sspool
+    name: Default
     jobs:
     - job: third_job
       steps: 
