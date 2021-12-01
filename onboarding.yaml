@@ -1,6 +1,6 @@
   variables:
     -name: message
-     value: Hello world
+     value: 'Hello world'
   
   stages:
   - stage: first-stage
