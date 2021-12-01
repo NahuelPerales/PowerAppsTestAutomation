@@ -4,18 +4,18 @@ variables:
 stages:
 - stage: first-stage
   jobs:
-  - job: first-job
+- job: first-job
   steps: 
 - script: echo $(message)
 - job: second-job
   steps: 
-  -script: echo $(message)
+- script: echo $(message)
 
 - stage: second-stage
   jobs:
 - job: third-job
   steps: 
-  -script: echo $(message)
+- script: echo $(message)
 - job: fourth-job
   steps: 
-  -script: echo $(message)
+- script: echo $(message)
