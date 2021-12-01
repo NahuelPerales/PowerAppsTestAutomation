@@ -7,7 +7,7 @@ stages:
     - job: first-job
       steps: 
         - script: echo $(message)
-        - job: second-job
+    - job: second-job
       steps: 
         - script: echo $(message)
 
@@ -16,6 +16,6 @@ stages:
     - job: third-job
       steps: 
         - script: echo $(message)
-        - job: fourth-job
+    - job: fourth-job
       steps: 
         - script: echo $(message)
