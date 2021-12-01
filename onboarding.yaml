@@ -6,16 +6,16 @@
     jobs:
     - job: first-job
       steps: 
-        -script: echo ${{ message }}
+        -script: echo $(message)
     - job: second-job
       steps: 
-        -script: echo ${{ message }}
+        -script: echo $(message)
 
   - stage: second-stage
     jobs:
     - job: first-job
       steps: 
-        -script: echo ${{ message }}
+        -script: echo $(message)
     - job: second-job
       steps: 
-        -script: echo ${{ message }}
+        -script: echo $(message)
